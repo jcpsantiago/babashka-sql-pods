@@ -197,12 +197,14 @@
                   features/hsqldb? "pod.babashka.hsqldb"
                   features/oracle? "pod.babashka.oracle"
                   features/mssql? "pod.babashka.mssql"
+                  features/snowflake? "pod.babashka.snowflake"
                   :else (throw (Exception. "Feature flag expected."))))
 
 (def sql-sql-ns (cond features/postgresql? "pod.babashka.postgresql.sql"
                       features/hsqldb? "pod.babashka.hsqldb.sql"
                       features/oracle? "pod.babashka.oracle.sql"
                       features/mssql? "pod.babashka.mssql.sql"
+                      features/snowflake? "pod.babashka.snowflake"
                       :else (throw (Exception. "Feature flag expected."))))
 
 (def lookup
